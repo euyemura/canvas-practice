@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Initial Practice</title>
+    <script>
+      function drawIt(){
+        let canvas =
+        document.getElementById('whatever')
+        if(canvas.getContext){
+          console.log('i should be working')
+          let ctx = canvas.getContext('2d')
+          ctx.fillStyle = 'rgba(200,0,0, .5)'
+          ctx.fillRect(10,10,50,50)
+
+          ctx.fillStyle = 'rgba(0,0,200, .5)'
+          ctx.fillRect(35,10,50,50)
+
+          ctx.strokeRect(35,22.5,25,25);
+          ctx.clearRect(42.5, 30, 10, 10);
+
+
+          ctx.beginPath()
+          ctx.moveTo(150, 50)
+          ctx.lineTo(125,90)
+          ctx.lineTo(175, 90)
+          ctx.fill()
+
+
+          ctx.beginPath()
+          ctx.moveTo(125,90)
+          ctx.lineTo(100, 130)
+          ctx.lineTo(150,130)
+          ctx.fill()
+
+          ctx.beginPath()
+          ctx.moveTo(175, 90)
+          ctx.lineTo(150, 130)
+          ctx.lineTo(200, 130)
+          ctx.fill()
+        }
+
+
+      }
+    </script>
+    <style>
+      canvas {
+        border: black 1px solid;
+      }
+    </style>
+
+  </head>
+  <body onload="drawIt();">
+    <h1>The Beginning</h1>
+    <canvas id="whatever"></canvas>
+
+  </body>
+</html>
